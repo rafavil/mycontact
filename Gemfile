@@ -24,6 +24,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 # bootstrap sass
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
+# install faker to create fake data
+gem 'faker', '~> 1.6', '>= 1.6.3'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
