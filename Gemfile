@@ -31,6 +31,8 @@ gem 'bootstrap-will_paginate', '~> 0.0.10'
 
 gem 'paperclip', '~> 4.3', '>= 4.3.6'
 
+gem 'jasny-bootstrap-rails', '~> 3.1', '>= 3.1.3'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
