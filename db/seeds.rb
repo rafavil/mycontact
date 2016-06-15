@@ -5,7 +5,15 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Group.destroy_all
 Contact.destroy_all
+
+# generate groups dummy data
+groups = []
+# create new group and get the id and store to groups array
+groups << Group.create(name: "Family").id # 0
+groups << Group.create(name: "Friend").id # 1
+groups << Group.create(name: "Colleagues").id # 2
 
 contacts = []
 
@@ -18,10 +26,14 @@ contacts = []
     email: Faker::Internet.email,
     company: Faker::Company.name,
     address: "#{Faker::Address.street_name} #{Faker::Address.zip} #{Faker::Address.city}",
-    phone: Faker::PhoneNumber.cell_phone
+    phone: Faker::PhoneNumber.cell_phone,
+    group_id: groups[Random.rand(0..2)]
   }
   contacts.push(new_contact)
 end
 
 # save the fake data to the database
 Contact.create(contacts)
+
+p "#{Group.count} groups successfully created"
+p "#{Contact.count} contacts successfully created"

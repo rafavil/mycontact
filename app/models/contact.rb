@@ -1,4 +1,5 @@
 class Contact < ActiveRecord::Base
+  belongs_to :group
   # add validations
   validates :name, :email, :phone, presence: true
   
