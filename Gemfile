@@ -27,6 +27,8 @@ gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 # install faker to create fake data
 gem 'faker', '~> 1.6', '>= 1.6.3'
 
+gem 'bootstrap-will_paginate', '~> 0.0.10'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
